@@ -6,9 +6,10 @@ namespace Genetics
     class Program
     {
 
-        List<Bacteria> bacList = new List<Bacteria>();
+        static GraphicsManager graphics;
+        static WorldManager world;
 
-        void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
             Console.ReadLine();
@@ -22,8 +23,34 @@ namespace Genetics
             }
         }
 
-        bool Game() {
+        static bool Game() {
+            bool active = true;
+            Load();
+            graphics.Refresh();
+            while (active)
+            {
+                string input = Console.ReadLine();
+                active = (input == "x") ? false : true;
+                if (!active) {
+                    break;
+                }
+                switch (input) {
+                    case "a":
+                        graphics.Refresh();
+                        break;
+                    default:
+                        break;
+                }
+            }
             return false;
+        }
+
+        static void Load()
+        {
+            world = new WorldManager();
+            graphics = new GraphicsManager(world, world.BacteriaList);
+            bacList.Add(new Bacteria());
+            bacList.Add(new Bacteria());
         }
     }
 }

@@ -6,15 +6,15 @@ namespace Genetics
 {
     struct Transform
     {
-        int x;
-        int y;
+        public int x;
+        public int y;
 
         public Transform(int x, int y) {
             this.x = x;
             this.y = y;
         }
 
-        public Transform Origin() {
+        public Transform Random() {
             Random rnd = new Random();
             int x1 = rnd.Next(0,3);
             int y1 = rnd.Next(0,3);

@@ -6,18 +6,21 @@ namespace Genetics
 {
     class WorldManager
     {
-        int numOfBacteria;
+        public int Phases { get { return phases; } }
+        int phases;
 
-        void Start()
-        {
-            numOfBacteria = 2;
-            GenerateBacteria(numOfBacteria);
+        List<Bacteria> bacList = new List<Bacteria>();
+        public List<Bacteria> BacteriaList { get { return bacList; } }
+
+        public void Start() {
+            phases = 0;
         }
 
-        void GenerateBacteria(int a) {
-            for (int i = 0; i < a; i++) {
-                
-            }
+        /// <summary>
+        /// Moves the Environment forward in time.
+        /// </summary>
+        public void Next() {
+            phases += 1;
         }
     }
 }
