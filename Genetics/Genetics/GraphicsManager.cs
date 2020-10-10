@@ -6,9 +6,6 @@ namespace Genetics
 {
     class GraphicsManager
     {
-        int bac1 = 1;
-        int bac2 = 2;
-
         List<Bacteria> bacList = new List<Bacteria>();
 
         WorldManager world;
@@ -25,11 +22,7 @@ namespace Genetics
             { 0, 0, 0, 0}
         };
 
-        public int[,] plane {
-            get {
-                return grid;
-            }
-        }
+        public int[,] plane {get { return grid; }}
 
         public void Refresh()
         {
@@ -39,7 +32,7 @@ namespace Genetics
         }
 
         /// <summary>
-        /// Processes what needs to be displayed.
+        /// Processes any changes to the Grid
         /// </summary>
         void Process() {
             for (int i = 0; i < bacList.Count; i++) {
@@ -56,7 +49,7 @@ namespace Genetics
         /// Prints the Information on the Console
         /// </summary>
         void Print() {
-            Console.WriteLine("Frame: ");
+            Console.WriteLine("Frame: " + world.CurrentPhase);
             Console.WriteLine(grid[0, 0].ToString() + grid[0, 1].ToString() + grid[0, 2].ToString()+ grid[0, 3].ToString());
             Console.WriteLine(grid[1, 0].ToString() + grid[1, 1].ToString() + grid[1, 2].ToString() + grid[1, 3].ToString());
             Console.WriteLine(grid[2, 0].ToString() + grid[2, 1].ToString() + grid[2, 2].ToString() + grid[2, 3].ToString());

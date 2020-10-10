@@ -9,3 +9,16 @@ C:\Users\Nicholas Maver\Desktop\GitHub\GameTests\Genetics\Genetics\bin\Debug\net
 C:\Users\Nicholas Maver\Desktop\GitHub\GameTests\Genetics\Genetics\bin\Debug\netcoreapp3.0\Genetics.pdb
 C:\Users\Nicholas Maver\Desktop\GitHub\GameTests\Genetics\Genetics\obj\Debug\netcoreapp3.0\Genetics.dll
 C:\Users\Nicholas Maver\Desktop\GitHub\GameTests\Genetics\Genetics\obj\Debug\netcoreapp3.0\Genetics.pdb
+C:\Users\Nic\Desktop\Github Repos\GameTests\Genetics\Genetics\bin\Debug\netcoreapp3.0\Genetics.exe
+C:\Users\Nic\Desktop\Github Repos\GameTests\Genetics\Genetics\bin\Debug\netcoreapp3.0\Genetics.deps.json
+C:\Users\Nic\Desktop\Github Repos\GameTests\Genetics\Genetics\bin\Debug\netcoreapp3.0\Genetics.runtimeconfig.json
+C:\Users\Nic\Desktop\Github Repos\GameTests\Genetics\Genetics\bin\Debug\netcoreapp3.0\Genetics.runtimeconfig.dev.json
+C:\Users\Nic\Desktop\Github Repos\GameTests\Genetics\Genetics\bin\Debug\netcoreapp3.0\Genetics.dll
+C:\Users\Nic\Desktop\Github Repos\GameTests\Genetics\Genetics\bin\Debug\netcoreapp3.0\Genetics.pdb
+C:\Users\Nic\Desktop\Github Repos\GameTests\Genetics\Genetics\obj\Debug\netcoreapp3.0\Genetics.csprojAssemblyReference.cache
+C:\Users\Nic\Desktop\Github Repos\GameTests\Genetics\Genetics\obj\Debug\netcoreapp3.0\Genetics.AssemblyInfoInputs.cache
+C:\Users\Nic\Desktop\Github Repos\GameTests\Genetics\Genetics\obj\Debug\netcoreapp3.0\Genetics.AssemblyInfo.cs
+C:\Users\Nic\Desktop\Github Repos\GameTests\Genetics\Genetics\obj\Debug\netcoreapp3.0\Genetics.csproj.CoreCompileInputs.cache
+C:\Users\Nic\Desktop\Github Repos\GameTests\Genetics\Genetics\obj\Debug\netcoreapp3.0\Genetics.dll
+C:\Users\Nic\Desktop\Github Repos\GameTests\Genetics\Genetics\obj\Debug\netcoreapp3.0\Genetics.pdb
+C:\Users\Nic\Desktop\Github Repos\GameTests\Genetics\Genetics\obj\Debug\netcoreapp3.0\Genetics.genruntimeconfig.cache

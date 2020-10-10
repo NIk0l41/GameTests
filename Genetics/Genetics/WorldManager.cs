@@ -6,14 +6,17 @@ namespace Genetics
 {
     class WorldManager
     {
-        public int Phases { get { return phases; } }
+        public int CurrentPhase { get { return phases; } }
         int phases;
 
         List<Bacteria> bacList = new List<Bacteria>();
         public List<Bacteria> BacteriaList { get { return bacList; } }
 
-        public void Start() {
+        public void Start(int NumberOfBacteria) {
             phases = 0;
+            for (int i = 0; i<NumberOfBacteria; i++) {
+                bacList.Add(new Bacteria(i));
+            }
         }
 
         /// <summary>

@@ -6,8 +6,6 @@ namespace Genetics
 {
     class Bacteria
     {
-
-
         public Transform transform;
         public Chromosome1 chrom1;
 
@@ -18,8 +16,6 @@ namespace Genetics
         public int BacteriaID { get { return bacID; } }
         public State Current { get { return current; } }
 
-        Random rnd;
-
         public Bacteria(int ID) {
             bacID = ID;
             current = State.Alive;
@@ -29,7 +25,6 @@ namespace Genetics
 
         public void Start()
         {
-            //What are we gonna do here boiz?
             chrom1 = new Chromosome1();
             transform = transform.Random();
         }

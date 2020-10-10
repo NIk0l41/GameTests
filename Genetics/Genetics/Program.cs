@@ -13,13 +13,28 @@ namespace Genetics
         {
             Console.WriteLine("Hello World!");
             Console.ReadLine();
-            Console.WriteLine("So, this is a thing.");
-            Console.ReadLine();
-            Console.WriteLine("If you hit enter again, you'll enter the environment.");
-            Console.ReadLine();
-            bool active = true;
-            while (active) {
-                active = Game();
+            Console.WriteLine("How many bacteria do you want?");
+            string input = Console.ReadLine();
+            bool a;
+            try
+            {
+                int num = Convert.ToInt32(input);
+                a = true;
+            }
+            catch (Exception e) {
+                Console.WriteLine(e.Message);
+                Console.ReadLine();
+                a = false;  
+            }
+            if (a)
+            {
+                Console.WriteLine("If you hit enter again, you'll enter the environment.");
+                Console.ReadLine();
+                bool active = true;
+                while (active)
+                {
+                    active = Game();
+                }
             }
         }
 
@@ -49,8 +64,6 @@ namespace Genetics
         {
             world = new WorldManager();
             graphics = new GraphicsManager(world, world.BacteriaList);
-            bacList.Add(new Bacteria());
-            bacList.Add(new Bacteria());
         }
     }
 }
