@@ -35,6 +35,7 @@ namespace Genetics
         /// Processes any changes to the Grid
         /// </summary>
         void Process() {
+            //Refresh Bacteria Location if Alive
             for (int i = 0; i < bacList.Count; i++) {
                 if (bacList[i].Current != State.Dead)
                 {

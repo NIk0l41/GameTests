@@ -63,6 +63,7 @@ namespace Genetics
         static void Load()
         {
             world = new WorldManager();
+            world.Start(2);
             graphics = new GraphicsManager(world, world.BacteriaList);
         }
     }
