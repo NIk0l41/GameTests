@@ -12,6 +12,15 @@ namespace Genetics
         List<Bacteria> bacList = new List<Bacteria>();
         public List<Bacteria> BacteriaList { get { return bacList; } }
 
+
+        /// <summary>
+        /// Used for Initialisation
+        /// </summary>
+        /// <param name="NumberOfBacteria"></param>
+        public WorldManager(int NumberOfBacteria) {
+            Start(2);
+        }
+
         /// <summary>
         /// To Be Called on Startup
         /// </summary>
@@ -28,6 +37,9 @@ namespace Genetics
         /// </summary>
         public void Next() {
             phases += 1;
+            foreach (Bacteria b in bacList) {
+
+            }
         }
     }
 }

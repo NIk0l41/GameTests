@@ -8,6 +8,7 @@ namespace Genetics
     {
         public Transform transform;
         public Chromosome1 chrom1;
+        public Brain brain;
 
         int bacID;
         bool dead;
@@ -27,6 +28,7 @@ namespace Genetics
         {
             chrom1 = new Chromosome1();
             transform = transform.Random();
+            brain = new Brain(chrom1);
         }
 
         public void Die() {
