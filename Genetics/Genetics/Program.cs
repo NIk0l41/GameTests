@@ -13,56 +13,55 @@ namespace Genetics
         {
             Console.WriteLine("Hello World!");
             Console.ReadLine();
-            Console.WriteLine("How many bacteria do you want?");
+            Console.WriteLine("How many cows do you want?");
             string input = Console.ReadLine();
-            bool a;
             try
             {
                 int num = Convert.ToInt32(input);
-                a = true;
-            }
-            catch (Exception e) {
-                Console.WriteLine(e.Message);
-                Console.ReadLine();
-                a = false;  
-            }
-            if (a)
-            {
                 Console.WriteLine("If you hit enter again, you'll enter the environment.");
                 Console.ReadLine();
                 bool active = true;
                 while (active)
                 {
-                    active = Game();
+                    active = Game(num);
                 }
             }
+            catch (Exception e) {
+                Console.WriteLine(e.Message);
+                Console.ReadLine();
+            }
+                
         }
 
-        static bool Game() {
+        static bool Game(int n) {
             bool active = true;
-            Load();
+            Load(n);
             graphics.Refresh();
             while (active)
             {
                 string input = Console.ReadLine();
+                //Inputting 'x' will close the window.
                 active = (input == "x") ? false : true;
                 if (!active) {
                     break;
                 }
+                //Else, it will go through this switch.
                 switch (input) {
                     case "a":
-                        graphics.Refresh();
+                        //Gotta work on whatever the hell this is :/
+                        graphics.Menu(input);
                         break;
                     default:
+                        graphics.Refresh();
                         break;
                 }
             }
             return false;
         }
 
-        static void Load()
+        static void Load(int n)
         {
-            world = new WorldManager(2);
+            world = new WorldManager(n);
             graphics = new GraphicsManager(world, world.CowList);
         }
     }

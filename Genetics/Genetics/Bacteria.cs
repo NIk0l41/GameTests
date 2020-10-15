@@ -13,9 +13,12 @@ namespace Genetics
         int cowID;
         bool dead;
         State current;
+        int sight;
 
         public int CowID { get { return cowID; } }
         public State Current { get { return current; } }
+
+
 
         public Cow(int ID) {
             cowID = ID;
@@ -29,6 +32,10 @@ namespace Genetics
             chrom1 = new Chromosome1();
             transform = transform.Random();
             brain = new Brain(chrom1);
+        }
+
+        public void Update() {
+            brain.Update();
         }
 
         public void Die() {

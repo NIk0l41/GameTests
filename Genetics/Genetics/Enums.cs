@@ -9,4 +9,12 @@ namespace Genetics
         Alive,
         Dead
     }
+
+    enum objects {
+        None,
+        Wall,
+        Water,
+        Food,
+        Cow
+    }
 }

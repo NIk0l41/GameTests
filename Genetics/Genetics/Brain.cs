@@ -14,5 +14,10 @@ namespace Genetics
             this.chrom1 = chrom1;
             isMale = chrom1.IsMale;
         }
+
+        public void Update()
+        {
+
+        }
     }
 }

@@ -12,13 +12,26 @@ namespace Genetics
         List<Cow> cowList = new List<Cow>();
         public List<Cow> CowList { get { return cowList; } }
 
+        string[,] world = new string[4,4]{
+            {"","","","" },
+            {"","","","" },
+            {"","","","" },
+            {"","","","" }
+        };
+
+        objects[,] worldObj = new objects[4, 4] {
+            {objects.None, objects.Wall, objects.Wall, objects.None},
+            {objects.None, objects.None, objects.None, objects.None},
+            {objects.None, objects.Wall, objects.Wall, objects.None},
+            {objects.None, objects.None, objects.None, objects.None}
+        };
 
         /// <summary>
         /// Used for Initialisation
         /// </summary>
         /// <param name="NumberOfCows"></param>
         public WorldManager(int NumberOfCows) {
-            Start(2);
+            Start(NumberOfCows);
         }
 
         /// <summary>
