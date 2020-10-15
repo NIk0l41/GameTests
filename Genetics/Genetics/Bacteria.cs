@@ -4,21 +4,21 @@ using System.Text;
 
 namespace Genetics
 {
-    class Bacteria
+    class Cow
     {
         public Transform transform;
         public Chromosome1 chrom1;
         public Brain brain;
 
-        int bacID;
+        int cowID;
         bool dead;
         State current;
 
-        public int BacteriaID { get { return bacID; } }
+        public int CowID { get { return cowID; } }
         public State Current { get { return current; } }
 
-        public Bacteria(int ID) {
-            bacID = ID;
+        public Cow(int ID) {
+            cowID = ID;
             current = State.Alive;
             dead = false;
             Start();

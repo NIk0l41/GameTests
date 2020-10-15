@@ -9,15 +9,15 @@ namespace Genetics
         public int CurrentPhase { get { return phases; } }
         int phases;
 
-        List<Bacteria> bacList = new List<Bacteria>();
-        public List<Bacteria> BacteriaList { get { return bacList; } }
+        List<Cow> cowList = new List<Cow>();
+        public List<Cow> CowList { get { return cowList; } }
 
 
         /// <summary>
         /// Used for Initialisation
         /// </summary>
-        /// <param name="NumberOfBacteria"></param>
-        public WorldManager(int NumberOfBacteria) {
+        /// <param name="NumberOfCows"></param>
+        public WorldManager(int NumberOfCows) {
             Start(2);
         }
 
@@ -25,10 +25,10 @@ namespace Genetics
         /// To Be Called on Startup
         /// </summary>
         /// <param name="NumberOfBacteria"></param>
-        public void Start(int NumberOfBacteria) {
+        public void Start(int NumberOfCows) {
             phases = 0;
-            for (int i = 0; i<NumberOfBacteria; i++) {
-                bacList.Add(new Bacteria(i));
+            for (int i = 0; i<NumberOfCows; i++) {
+                cowList.Add(new Cow(i));
             }
         }
 
@@ -37,7 +37,7 @@ namespace Genetics
         /// </summary>
         public void Next() {
             phases += 1;
-            foreach (Bacteria b in bacList) {
+            foreach (Cow c in cowList) {
 
             }
         }

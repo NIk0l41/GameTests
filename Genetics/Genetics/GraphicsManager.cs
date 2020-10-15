@@ -6,12 +6,12 @@ namespace Genetics
 {
     class GraphicsManager
     {
-        List<Bacteria> bacList = new List<Bacteria>();
+        List<Cow> cowList = new List<Cow>();
 
         WorldManager world;
 
-        public GraphicsManager(WorldManager world, List<Bacteria> bacList) {
-            this.bacList = bacList;
+        public GraphicsManager(WorldManager world, List<Cow> cowList) {
+            this.cowList = cowList;
             this.world = world;
         }
 
@@ -35,12 +35,19 @@ namespace Genetics
         /// Processes any changes to the Grid
         /// </summary>
         void Process() {
-            //Refresh Bacteria Location if Alive
-            for (int i = 0; i < bacList.Count; i++) {
-                if (bacList[i].Current != State.Dead)
+            //Clears the Grid for Refreshment
+            for (int i = 0; i < 4; i++) {
+                for (int j = 0; j < 4; j++) {
+                    grid[i, j] = 0;
+                }
+            }
+
+            //Refresh Cow Location if Alive
+            for (int i = 0; i < cowList.Count; i++) {
+                if (cowList[i].Current != State.Dead)
                 {
-                    int j = bacList[i].transform.x;
-                    int k = bacList[i].transform.y;
+                    int j = cowList[i].transform.x;
+                    int k = cowList[i].transform.y;
                     grid[i, j] = i + 1;
                 }
             }
@@ -63,9 +70,9 @@ namespace Genetics
         /// <summary>
         /// Prints Details for a Selected Organism.
         /// </summary>
-        void PrintDetails(Bacteria a) {
+        void PrintDetails(Cow a) {
             Console.WriteLine("");
-            Console.WriteLine("Bacteria number: " + a.BacteriaID);
+            Console.WriteLine("Cow number: " + a.CowID);
             Console.WriteLine("-Chromosome 1 Data-");
             string tmp = (a.chrom1.IsMale) ? "Male" : "Female" ;
             Console.WriteLine("   Gender: " + tmp);
